@@ -145,7 +145,7 @@
     });
 
     /* ---------- Form submit → Google Sheets ---------- */
-    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbx8QBchHJj6WzjJcv1DqS7ObYyTkw3F_fiLAbAAbFYXKt7MzLoGgDiD3Q4uqD9XEBrL/exec';
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzfSxuL3RMwVHwMvOW5b4qj0XJ_SDEGMDDJlqyNLVYQQSzTGH4Bp4fg7aMPrAjVYLsl/exec';
 
     const form = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
