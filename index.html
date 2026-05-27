@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" data-i18n="meta_description" content="NeoPixel AI — жасанды интеллект арқылы кәсіби фото мен видео. AI портреттер, тауар фотолары, жарнамалық видеолар.">
+    <meta name="keywords" content="AI фото, AI видео, аватар жасау, тауар фотосы, жасанды интеллект, нейросеть фото, Қазақстан">
+    <title>NeoPixel AI — Жасанды интеллект арқылы фото мен видео</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23FF6B4A'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' font-family='Arial' font-weight='bold' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="logo" aria-label="NeoPixel AI">
+                <span class="logo__mark">N</span>
+                <span class="logo__text">NeoPixel<span class="logo__accent">.ai</span></span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <a href="#services" class="nav__link" data-i18n="nav_services">Қызметтер</a>
+                <a href="#portfolio" class="nav__link" data-i18n="nav_works">Жұмыстар</a>
+                <a href="#pricing" class="nav__link" data-i18n="nav_pricing">Бағалар</a>
+                <a href="#contact" class="nav__link" data-i18n="nav_contact">Байланыс</a>
+            </nav>
+
+            <div class="header__actions">
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <button class="lang-switch__btn is-active" data-lang="kk">ҚАЗ</button>
+                    <button class="lang-switch__btn" data-lang="ru">РУС</button>
+                </div>
+                <a href="#contact" class="btn btn--primary btn--sm" data-i18n="cta_order">Тапсырыс беру</a>
+                <button class="burger" id="burger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__bg">
+            <div class="blob blob--1"></div>
+            <div class="blob blob--2"></div>
+            <div class="blob blob--3"></div>
+            <div class="grid-pattern"></div>
+        </div>
+
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <span class="pill" data-i18n="hero_pill">⚡ Жаңа буын AI студиясы</span>
+                <h1 class="hero__title" data-i18n="hero_title">
+                    Жасанды интеллект арқылы <span class="text-gradient">кәсіби фото мен видео</span> — бірнеше минутта
+                </h1>
+                <p class="hero__subtitle" data-i18n="hero_subtitle">
+                    Аватар, портрет, тауар фотосы немесе жарнамалық видео — қымбат фотосессиясыз, тез әрі сапалы.
+                </p>
+
+                <div class="hero__cta">
+                    <a href="#contact" class="btn btn--primary btn--lg">
+                        <span data-i18n="cta_order">Тапсырыс беру</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#portfolio" class="btn btn--ghost btn--lg" data-i18n="cta_works">Жұмыстарды көру</a>
+                </div>
+
+                <div class="hero__stats">
+                    <div class="stat">
+                        <div class="stat__num">500+</div>
+                        <div class="stat__label" data-i18n="stat_projects">жоба жасалды</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__num">98%</div>
+                        <div class="stat__label" data-i18n="stat_satisfaction">клиент көңілінен шықты</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__num">24<span>сағ</span></div>
+                        <div class="stat__label" data-i18n="stat_time">орташа дайындау мерзімі</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__collage" aria-hidden="true">
+                <div class="collage__item collage__item--1">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="">
+                </div>
+                <div class="collage__item collage__item--2">
+                    <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=400&q=80" alt="">
+                </div>
+                <div class="collage__item collage__item--3">
+                    <img src="https://images.unsplash.com/photo-1581338834647-b0fb40704e21?w=400&q=80" alt="">
+                </div>
+                <div class="collage__item collage__item--4">
+                    <img src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?w=400&q=80" alt="">
+                </div>
+                <div class="collage__sparkle collage__sparkle--1">✦</div>
+                <div class="collage__sparkle collage__sparkle--2">✦</div>
+                <div class="collage__sparkle collage__sparkle--3">✦</div>
+            </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>AI Portraits</span><span>·</span>
+                <span>Product Photo</span><span>·</span>
+                <span>AI Video</span><span>·</span>
+                <span>Reels & Ads</span><span>·</span>
+                <span>Brand Content</span><span>·</span>
+                <span>AI Portraits</span><span>·</span>
+                <span>Product Photo</span><span>·</span>
+                <span>AI Video</span><span>·</span>
+                <span>Reels & Ads</span><span>·</span>
+                <span>Brand Content</span><span>·</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="pill" data-i18n="services_pill">Қызметтер</span>
+                <h2 class="section__title" data-i18n="services_title">
+                    Сізге не керек — <span class="text-gradient">бәрін жасаймыз</span>
+                </h2>
+                <p class="section__subtitle" data-i18n="services_subtitle">
+                    Үш бағыт. Бір студия. Шексіз идея.
+                </p>
+            </div>
+
+            <div class="services">
+                <article class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 21a8 8 0 1116 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="srv1_title">AI Портреттер мен аватарлар</h3>
+                    <p class="service-card__text" data-i18n="srv1_text">
+                        Бір селфиден ондаған кәсіби портрет. Әлеуметтік желіге, резюмеге немесе жай эстетика үшін.
+                    </p>
+                    <ul class="service-card__list">
+                        <li data-i18n="srv1_li1">30+ стильдегі портреттер</li>
+                        <li data-i18n="srv1_li2">LinkedIn және CV форматтары</li>
+                        <li data-i18n="srv1_li3">Жоғары рұқсаттылық (4K)</li>
+                    </ul>
+                    <a href="#contact" class="service-card__link">
+                        <span data-i18n="more">Толығырақ</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </a>
+                </article>
+
+                <article class="service-card service-card--featured reveal">
+                    <div class="service-card__badge" data-i18n="popular">Танымал</div>
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-6 9 6v12H3V9z M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="srv2_title">Тауар фотолары</h3>
+                    <p class="service-card__text" data-i18n="srv2_text">
+                        Тауарыңызды студиялық деңгейде көрсетіңіз. Дүкенге, маркетплейске және жарнамаға дайын суреттер.
+                    </p>
+                    <ul class="service-card__list">
+                        <li data-i18n="srv2_li1">Kaspi, Wildberries форматтары</li>
+                        <li data-i18n="srv2_li2">Фон ауыстыру және ретуш</li>
+                        <li data-i18n="srv2_li3">Lifestyle композициялар</li>
+                    </ul>
+                    <a href="#contact" class="service-card__link">
+                        <span data-i18n="more">Толығырақ</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </a>
+                </article>
+
+                <article class="service-card reveal">
+                    <div class="service-card__icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M23 7l-7 5 7 5V7zM1 5h15v14H1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="service-card__title" data-i18n="srv3_title">AI Видео және жарнама</h3>
+                    <p class="service-card__text" data-i18n="srv3_text">
+                        Брендіңізге арналған динамикалық видео-роликтер. Reels, TikTok және жарнама үшін.
+                    </p>
+                    <ul class="service-card__list">
+                        <li data-i18n="srv3_li1">Reels және Shorts (9:16)</li>
+                        <li data-i18n="srv3_li2">Жарнамалық роликтер</li>
+                        <li data-i18n="srv3_li3">Музыка және титрлер</li>
+                    </ul>
+                    <a href="#contact" class="service-card__link">
+                        <span data-i18n="more">Толығырақ</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section section--dark" id="portfolio">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="pill" data-i18n="portfolio_pill">Жұмыстар</span>
+                <h2 class="section__title" data-i18n="portfolio_title">
+                    Сөзден гөрі — <span class="text-gradient">нәтижеге қарасаңыз</span>
+                </h2>
+                <p class="section__subtitle" data-i18n="portfolio_subtitle">
+                    Соңғы клиенттердің жұмыстарынан таңдау.
+                </p>
+            </div>
+
+            <div class="filters reveal">
+                <button class="filter is-active" data-filter="all" data-i18n="filter_all">Барлығы</button>
+                <button class="filter" data-filter="portrait" data-i18n="filter_portrait">Портреттер</button>
+                <button class="filter" data-filter="product" data-i18n="filter_product">Тауарлар</button>
+                <button class="filter" data-filter="video" data-i18n="filter_video">Видео</button>
+            </div>
+
+            <div class="gallery" id="gallery">
+                <a class="gallery__item gallery__item--tall reveal" data-category="portrait" href="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=600&q=80" alt="AI portrait" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_portrait">Портрет</span></div>
+                </a>
+                <a class="gallery__item reveal" data-category="product" href="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Product photo" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_product">Тауар</span></div>
+                </a>
+                <a class="gallery__item gallery__item--wide reveal" data-category="video" href="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1600&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=900&q=80" alt="AI video" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_video">Видео</span></div>
+                    <div class="gallery__play">▶</div>
+                </a>
+                <a class="gallery__item reveal" data-category="portrait" href="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="AI portrait" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_portrait">Портрет</span></div>
+                </a>
+                <a class="gallery__item reveal" data-category="product" href="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=600&q=80" alt="Cosmetics" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_product">Тауар</span></div>
+                </a>
+                <a class="gallery__item gallery__item--tall reveal" data-category="portrait" href="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80" alt="AI portrait" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_portrait">Портрет</span></div>
+                </a>
+                <a class="gallery__item reveal" data-category="video" href="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" alt="Brand video" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_video">Видео</span></div>
+                    <div class="gallery__play">▶</div>
+                </a>
+                <a class="gallery__item reveal" data-category="product" href="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&q=85" target="_blank" rel="noopener">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" alt="Watch product" loading="lazy">
+                    <div class="gallery__overlay"><span data-i18n="cat_product">Тауар</span></div>
+                </a>
+            </div>
+
+            <!-- BEFORE / AFTER -->
+            <div class="before-after-wrap reveal">
+                <h3 class="ba__title" data-i18n="ba_title">Before / After — қалай өзгеретінін көріңіз</h3>
+                <p class="ba__subtitle" data-i18n="ba_subtitle">Слайдерді солға-оңға жылжытыңыз</p>
+
+                <div class="before-after" id="ba">
+                    <img class="ba__img ba__img--after" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1400&q=85" alt="After">
+                    <div class="ba__before-wrap" id="baBefore">
+                        <img class="ba__img ba__img--before" src="https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=1400&q=85" alt="Before">
+                    </div>
+                    <div class="ba__handle" id="baHandle">
+                        <div class="ba__handle-line"></div>
+                        <div class="ba__handle-circle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                    </div>
+                    <div class="ba__label ba__label--before" data-i18n="before">BEFORE</div>
+                    <div class="ba__label ba__label--after" data-i18n="after">AFTER</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="pill" data-i18n="how_pill">Қалай жұмыс істейді</span>
+                <h2 class="section__title" data-i18n="how_title">
+                    <span class="text-gradient">4 қарапайым</span> қадам
+                </h2>
+            </div>
+
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step__num">01</div>
+                    <h3 class="step__title" data-i18n="step1_title">Тапсырыс қалдырасыз</h3>
+                    <p class="step__text" data-i18n="step1_text">Қандай қызмет керегін жазасыз — мысалы аватар, тауар фотосы немесе видео.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">02</div>
+                    <h3 class="step__title" data-i18n="step2_title">Материал бересіз</h3>
+                    <p class="step__text" data-i18n="step2_text">Фото/тауар жіберіп, қалауыңыз бен референстерді айтасыз.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">03</div>
+                    <h3 class="step__title" data-i18n="step3_title">Біз жасаймыз</h3>
+                    <p class="step__text" data-i18n="step3_text">AI + кәсіби өңдеу. Сапаны қолмен тексереміз.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">04</div>
+                    <h3 class="step__title" data-i18n="step4_title">Дайын нәтиже</h3>
+                    <p class="step__text" data-i18n="step4_text">Қысқа мерзімде қолыңызда. Қаласаңыз — түзетулер жасаймыз.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section section--dark">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="pill" data-i18n="why_pill">Артықшылықтар</span>
+                <h2 class="section__title" data-i18n="why_title">
+                    Неге <span class="text-gradient">NeoPixel.ai?</span>
+                </h2>
+            </div>
+
+            <div class="features">
+                <div class="feature reveal">
+                    <div class="feature__icon">⚡</div>
+                    <h3 class="feature__title" data-i18n="f1_title">Жылдам</h3>
+                    <p class="feature__text" data-i18n="f1_text">Нәтиже бірнеше сағат немесе күн ішінде. Күтуге уақыт жоқ.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="feature__icon">💸</div>
+                    <h3 class="feature__title" data-i18n="f2_title">Қолжетімді</h3>
+                    <p class="feature__text" data-i18n="f2_text">Қымбат студиядан 5-10 есе арзан. Сапасы — кем емес.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="feature__icon">🎯</div>
+                    <h3 class="feature__title" data-i18n="f3_title">Әрі жеке, әрі бизнеске</h3>
+                    <p class="feature__text" data-i18n="f3_text">Бір аватардан бастап, толық бренд-контентке дейін.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="feature__icon">🔁</div>
+                    <h3 class="feature__title" data-i18n="f4_title">Тегін түзетулер</h3>
+                    <p class="feature__text" data-i18n="f4_text">Нәтижеге көңіліңіз толмаса — қайта жасаймыз.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="feature__icon">🔒</div>
+                    <h3 class="feature__title" data-i18n="f5_title">Құпиялылық</h3>
+                    <p class="feature__text" data-i18n="f5_text">Сіздің фотоларыңыз сізде ғана қалады. Үшінші тұлғаларға бермейміз.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="feature__icon">🎨</div>
+                    <h3 class="feature__title" data-i18n="f6_title">Шексіз стиль</h3>
+                    <p class="feature__text" data-i18n="f6_text">Кез келген стиль, кез келген фон. Тек қиялыңыздың шегі.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="pill" data-i18n="pricing_pill">Бағалар</span>
+                <h2 class="section__title" data-i18n="pricing_title">
+                    Әр бюджетке — <span class="text-gradient">өз тарифі</span>
+                </h2>
+                <p class="section__subtitle" data-i18n="pricing_subtitle">
+                    Барлық тарифтерде — жоғары сапа және тегін кеңес.
+                </p>
+            </div>
+
+            <div class="pricing">
+                <div class="plan reveal">
+                    <div class="plan__head">
+                        <div class="plan__name" data-i18n="plan1_name">Бастапқы</div>
+                        <div class="plan__price">
+                            <span class="plan__price-num">15 000</span>
+                            <span class="plan__price-cur">₸</span>
+                        </div>
+                        <div class="plan__desc" data-i18n="plan1_desc">Жеке тұлғаларға қарапайым старт</div>
+                    </div>
+                    <ul class="plan__features">
+                        <li data-i18n="plan1_f1">10 AI портрет</li>
+                        <li data-i18n="plan1_f2">3 стиль</li>
+                        <li data-i18n="plan1_f3">HD сапасы</li>
+                        <li data-i18n="plan1_f4">1 түзету</li>
+                        <li data-i18n="plan1_f5">2-3 күн ішінде</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--ghost btn--full" data-i18n="plan_choose">Таңдау</a>
+                </div>
+
+                <div class="plan plan--featured reveal">
+                    <div class="plan__badge" data-i18n="plan_popular">⭐ Танымал</div>
+                    <div class="plan__head">
+                        <div class="plan__name" data-i18n="plan2_name">Стандарт</div>
+                        <div class="plan__price">
+                            <span class="plan__price-num">39 000</span>
+                            <span class="plan__price-cur">₸</span>
+                        </div>
+                        <div class="plan__desc" data-i18n="plan2_desc">Көп контент керек болғанда</div>
+                    </div>
+                    <ul class="plan__features">
+                        <li data-i18n="plan2_f1">30 AI портрет немесе 15 тауар фотосы</li>
+                        <li data-i18n="plan2_f2">10 стиль / фон</li>
+                        <li data-i18n="plan2_f3">4K сапасы</li>
+                        <li data-i18n="plan2_f4">3 түзету</li>
+                        <li data-i18n="plan2_f5">1-2 күн ішінде</li>
+                        <li data-i18n="plan2_f6">Жедел қолдау</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary btn--full" data-i18n="plan_choose">Таңдау</a>
+                </div>
+
+                <div class="plan reveal">
+                    <div class="plan__head">
+                        <div class="plan__name" data-i18n="plan3_name">Бизнес</div>
+                        <div class="plan__price">
+                            <span class="plan__price-num" data-i18n="plan3_price">Жеке</span>
+                        </div>
+                        <div class="plan__desc" data-i18n="plan3_desc">Брендтер мен компанияларға</div>
+                    </div>
+                    <ul class="plan__features">
+                        <li data-i18n="plan3_f1">Шектеусіз контент</li>
+                        <li data-i18n="plan3_f2">AI видео + фото пакеті</li>
+                        <li data-i18n="plan3_f3">Бренд-стиль әзірлеу</li>
+                        <li data-i18n="plan3_f4">Шектеусіз түзетулер</li>
+                        <li data-i18n="plan3_f5">Жеке менеджер</li>
+                        <li data-i18n="plan3_f6">Айлық серіктестік</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--ghost btn--full" data-i18n="plan_request">Бағаны сұрау</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section--dark">
+        <div class="container">
+            <div class="section__head reveal">
+                <span class="pill" data-i18n="rev_pill">Пікірлер</span>
+                <h2 class="section__title" data-i18n="rev_title">
+                    Клиенттер <span class="text-gradient">не дейді</span>
+                </h2>
+            </div>
+
+            <div class="reviews">
+                <article class="review reveal">
+                    <div class="review__stars">★★★★★</div>
+                    <p class="review__text" data-i18n="rev1_text">«Аватарларым керемет шықты! Фотосессияға бармай-ақ LinkedIn-ге салатын 20-дан астам сурет алдым. Бағасы да өте тиімді.»</p>
+                    <div class="review__author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&q=80" alt="Айгерім">
+                        <div>
+                            <div class="review__name" data-i18n="rev1_name">Айгерім Қ.</div>
+                            <div class="review__role" data-i18n="rev1_role">Маркетолог · Алматы</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review reveal">
+                    <div class="review__stars">★★★★★</div>
+                    <p class="review__text" data-i18n="rev2_text">«Kaspi-ге арналған тауар фотолары студиялық деңгейде. Конверсия 2 есе өсті. Жыл бойы серіктестік ұстаймыз.»</p>
+                    <div class="review__author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80" alt="Дәурен">
+                        <div>
+                            <div class="review__name" data-i18n="rev2_name">Дәурен М.</div>
+                            <div class="review__role" data-i18n="rev2_role">Дүкен иесі · Астана</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="review reveal">
+                    <div class="review__text-stars">
+                        <div class="review__stars">★★★★★</div>
+                    </div>
+                    <p class="review__text" data-i18n="rev3_text">«Reels үшін жасаған видеоларыңыз TikTok-та виралге шықты. Жұмысыңыз жылдам, сапасы керемет. Рахмет!»</p>
+                    <div class="review__author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&q=80" alt="Динара">
+                        <div>
+                            <div class="review__name" data-i18n="rev3_name">Динара Б.</div>
+                            <div class="review__role" data-i18n="rev3_role">Контент-криэйтор</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / CTA -->
+    <section class="section section--cta" id="contact">
+        <div class="container">
+            <div class="cta-wrap">
+                <div class="cta__info reveal">
+                    <span class="pill" data-i18n="contact_pill">Байланыс</span>
+                    <h2 class="section__title" data-i18n="contact_title">
+                        Идеяңызды <span class="text-gradient">шындыққа</span> айналдырайық
+                    </h2>
+                    <p class="cta__text" data-i18n="contact_text">
+                        Сұрағыңыз бар ма? Жазыңыз — 10 минут ішінде жауап береміз.
+                    </p>
+
+                    <div class="contacts">
+                        <a href="https://wa.me/77001234567" class="contact-link contact-link--wa">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.3c1.4.7 2.9 1.1 4.7 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="https://t.me/neopixel_ai" class="contact-link contact-link--tg">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+                            <span>Telegram</span>
+                        </a>
+                        <a href="https://instagram.com/neopixel.ai" class="contact-link contact-link--ig">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="tel:+77001234567" class="contact-link contact-link--phone">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            <span>+7 700 123 45 67</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="form reveal" id="contactForm">
+                    <h3 class="form__title" data-i18n="form_title">Тегін кеңес алу</h3>
+
+                    <div class="form__row">
+                        <label class="form__label">
+                            <span data-i18n="form_name">Атыңыз</span>
+                            <input type="text" name="name" required placeholder="Сіздің атыңыз" data-i18n-attr="placeholder|form_name_ph">
+                        </label>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label">
+                            <span data-i18n="form_phone">Телефон / WhatsApp</span>
+                            <input type="tel" name="phone" required placeholder="+7 ___ ___ __ __">
+                        </label>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label">
+                            <span data-i18n="form_service">Қандай қызмет керек?</span>
+                            <select name="service" required>
+                                <option value="" data-i18n="form_choose">Таңдаңыз...</option>
+                                <option value="portrait" data-i18n="form_opt1">AI портрет / аватар</option>
+                                <option value="product" data-i18n="form_opt2">Тауар фотолары</option>
+                                <option value="video" data-i18n="form_opt3">AI видео / жарнама</option>
+                                <option value="other" data-i18n="form_opt4">Басқа</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form__row">
+                        <label class="form__label">
+                            <span data-i18n="form_message">Хабарлама</span>
+                            <textarea name="message" rows="3" placeholder="Қысқаша жазыңыз..." data-i18n-attr="placeholder|form_message_ph"></textarea>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full btn--lg">
+                        <span data-i18n="form_submit">Жіберу</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+
+                    <p class="form__note" data-i18n="form_note">📞 10 минут ішінде жауап береміз</p>
+
+                    <div class="form__success" id="formSuccess">
+                        <div class="form__success-icon">✓</div>
+                        <div data-i18n="form_success">Сұранысыңыз қабылданды! Жақын арада хабарласамыз.</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="#" class="logo">
+                        <span class="logo__mark">N</span>
+                        <span class="logo__text">NeoPixel<span class="logo__accent">.ai</span></span>
+                    </a>
+                    <p class="footer__desc" data-i18n="footer_desc">Жасанды интеллект арқылы кәсіби фото мен видео. Сіздің брендіңізге арналған студия.</p>
+                </div>
+
+                <div class="footer__col">
+                    <h4 data-i18n="footer_menu">Меню</h4>
+                    <a href="#services" data-i18n="nav_services">Қызметтер</a>
+                    <a href="#portfolio" data-i18n="nav_works">Жұмыстар</a>
+                    <a href="#pricing" data-i18n="nav_pricing">Бағалар</a>
+                    <a href="#contact" data-i18n="nav_contact">Байланыс</a>
+                </div>
+
+                <div class="footer__col">
+                    <h4 data-i18n="footer_contact">Байланыс</h4>
+                    <a href="tel:+77001234567">+7 700 123 45 67</a>
+                    <a href="mailto:hello@neopixel.ai">hello@neopixel.ai</a>
+                    <div class="footer__socials">
+                        <a href="https://instagram.com/neopixel.ai" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+                        </a>
+                        <a href="https://t.me/neopixel_ai" aria-label="Telegram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+                        </a>
+                        <a href="https://wa.me/77001234567" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.3c1.4.7 2.9 1.1 4.7 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <span>© <span id="year"></span> NeoPixel.ai — <span data-i18n="footer_rights">Барлық құқықтар қорғалған</span></span>
+                <span data-i18n="footer_made">Made with ⚡ in Kazakhstan</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA -->
+    <a href="https://wa.me/77001234567" class="float-cta" aria-label="WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.5-.9-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.3c1.4.7 2.9 1.1 4.7 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
