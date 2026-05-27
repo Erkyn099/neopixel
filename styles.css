@@ -959,8 +959,24 @@ button {
 }
 
 .feature__icon {
-    font-size: 36px;
-    margin-bottom: 16px;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+}
+
+.feature:nth-child(3n+2) .feature__icon {
+    background: rgba(110, 63, 255, 0.1);
+    color: var(--secondary);
+}
+
+.feature:nth-child(3n+3) .feature__icon {
+    background: rgba(0, 212, 168, 0.1);
+    color: var(--accent);
 }
 
 .feature__title {
