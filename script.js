@@ -131,23 +131,59 @@
         baAnimIo.observe(ba);
     }
 
-    /* ---------- Form submit ---------- */
+    /* ---------- FAQ accordion ---------- */
+    document.querySelectorAll('.faq__item').forEach(item => {
+        const btn = item.querySelector('.faq__q');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('is-open');
+            document.querySelectorAll('.faq__item.is-open').forEach(other => {
+                if (other !== item) other.classList.remove('is-open');
+            });
+            item.classList.toggle('is-open', !isOpen);
+        });
+    });
+
+    /* ---------- Form submit → Google Sheets ---------- */
+    const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzUItzbZzsTjQTle1ieUyhScrLhUAaLP-X_fHAx2upPxch8LoJXCDPYxEiPqTJeC2mM/exec';
+
     const form = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     if (form && formSuccess) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            // In production: send via fetch() to backend / Telegram bot / formspree
+
             const data = new FormData(form);
             const payload = Object.fromEntries(data.entries());
-            console.log('Form submission:', payload);
+            const submitBtn = form.querySelector('button[type="submit"]');
 
-            formSuccess.classList.add('is-active');
-            form.reset();
+            // disable button while sending
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.cursor = 'wait';
+            }
 
-            setTimeout(() => {
-                formSuccess.classList.remove('is-active');
-            }, 4500);
+            // text/plain avoids CORS preflight; Apps Script reads e.postData.contents
+            fetch(GOOGLE_SHEETS_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload)
+            })
+            .catch(err => console.error('Form submission error:', err))
+            .finally(() => {
+                formSuccess.classList.add('is-active');
+                form.reset();
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '';
+                    submitBtn.style.cursor = '';
+                }
+                setTimeout(() => {
+                    formSuccess.classList.remove('is-active');
+                }, 4500);
+            });
         });
     }
 
@@ -158,6 +194,7 @@
             nav_services: 'Қызметтер',
             nav_works: 'Жұмыстар',
             nav_pricing: 'Бағалар',
+            nav_faq: 'FAQ',
             nav_contact: 'Байланыс',
             cta_order: 'Тапсырыс беру',
             cta_works: 'Жұмыстарды көру',
@@ -274,6 +311,21 @@
             rev3_name: 'Динара Б.',
             rev3_role: 'Контент-криэйтор',
 
+            faq_pill: 'Жиі қойылатын сұрақтар',
+            faq_title: 'Барлық сұрағыңызға — <span class="text-gradient">жауап</span>',
+            faq1_q: 'AI фото мен видео нақты қалай жасалады?',
+            faq1_a: 'Біз ең жаңа AI-модельдерді (Midjourney, Stable Diffusion, Runway, Sora т.б.) қолдана отырып, сіздің материалыңызды кәсіби өңдеуден өткіземіз. Соңында әр сурет/видео сапасын маман қолмен тексереді — нәтиже студиялық деңгейде болады.',
+            faq2_q: 'Қанша уақыт ішінде дайын болады?',
+            faq2_a: 'Тапсырыс түріне байланысты: AI портреттер — 1-3 күн, тауар фотолары — 1-2 күн, AI видео — 3-7 күн. Жедел тапсырыс (қосымша ақыға) — 24 сағат ішінде.',
+            faq3_q: 'Маған не жіберу керек?',
+            faq3_a: 'Портреттерге — 10-20 жақсы сапалы селфи (әртүрлі ракурс, жарық). Тауар фотосына — тауардың 3-5 суреті немесе өзін. Видеоға — идея/сценарий мен референс. Жоқ болса — біз ұсыныс беруге дайынбыз!',
+            faq4_q: 'Нәтиже көңіліме толмаса не болады?',
+            faq4_a: 'Барлық тарифте тегін түзетулер бар. Егер нәтиже мүлдем сай келмесе — қайта жасап береміз немесе ақшаңызды қайтарамыз. Бұл біздің сапа кепілдігіміз.',
+            faq5_q: 'Қалай төлеуге болады?',
+            faq5_a: 'Kaspi Pay, Halyk, банк аударымы немесе қолма-қол. Бизнес клиенттерге — шот-фактура. Бастапқыда — 50% алдын ала, қалғаны нәтиже бойынша.',
+            faq6_q: 'Менің фотоларым қауіпсіз бе?',
+            faq6_a: 'Иә, толықтай. Сіздің материалдарыңыз ешқашан үшінші тұлғаларға берілмейді, реклама үшін қолданылмайды. Тапсырыс аяқталған соң — қаласаңыз, файлдарды серверден өшіреміз.',
+
             contact_pill: 'Байланыс',
             contact_title: 'Идеяңызды <span class="text-gradient">шындыққа</span> айналдырайық',
             contact_text: 'Сұрағыңыз бар ма? Жазыңыз — 10 минут ішінде жауап береміз.',
@@ -304,6 +356,7 @@
             nav_services: 'Услуги',
             nav_works: 'Работы',
             nav_pricing: 'Цены',
+            nav_faq: 'FAQ',
             nav_contact: 'Контакты',
             cta_order: 'Заказать',
             cta_works: 'Смотреть работы',
@@ -419,6 +472,21 @@
             rev3_text: '«Видео для Reels стали виральными в TikTok. Работаете быстро, качество отличное. Спасибо!»',
             rev3_name: 'Динара Б.',
             rev3_role: 'Контент-креатор',
+
+            faq_pill: 'Частые вопросы',
+            faq_title: 'Ответы на все ваши <span class="text-gradient">вопросы</span>',
+            faq1_q: 'Как именно делаются AI фото и видео?',
+            faq1_a: 'Мы используем самые новые AI-модели (Midjourney, Stable Diffusion, Runway, Sora и др.) и пропускаем ваш материал через профессиональную обработку. В конце каждое фото/видео проверяется специалистом вручную — результат на студийном уровне.',
+            faq2_q: 'За какое время будет готово?',
+            faq2_a: 'Зависит от типа заказа: AI-портреты — 1-3 дня, фото товаров — 1-2 дня, AI-видео — 3-7 дней. Срочный заказ (с доплатой) — за 24 часа.',
+            faq3_q: 'Что мне нужно прислать?',
+            faq3_a: 'Для портретов — 10-20 качественных селфи (разные ракурсы, освещение). Для фото товара — 3-5 фото товара или сам товар. Для видео — идею/сценарий и референс. Если нет — мы готовы предложить!',
+            faq4_q: 'А если результат мне не понравится?',
+            faq4_a: 'Во всех тарифах есть бесплатные правки. Если результат совсем не подойдёт — переделаем или вернём деньги. Это наша гарантия качества.',
+            faq5_q: 'Как можно оплатить?',
+            faq5_a: 'Kaspi Pay, Halyk, банковский перевод или наличные. Для бизнес-клиентов — счёт-фактура. Изначально — 50% предоплата, остальное по результату.',
+            faq6_q: 'Безопасны ли мои фото?',
+            faq6_a: 'Да, полностью. Ваши материалы никогда не передаются третьим лицам, не используются для рекламы. По завершении заказа — по желанию удалим файлы с сервера.',
 
             contact_pill: 'Контакты',
             contact_title: 'Превратим вашу идею <span class="text-gradient">в реальность</span>',
