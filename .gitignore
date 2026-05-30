@@ -3,3 +3,10 @@ apps-script.gs
 
 # macOS
 .DS_Store
+
+# Жоба папкасына салынған түпнұсқа (өңделмеген) материалдар —
+# сайтқа тек таза атаулы (hero-*, portrait-*, product-*, video-1/2) нұсқалары кетеді
+assets/**/IMG_*
+assets/hero/[0-9]*
+assets/video/*.MOV
+assets/ОҚЫҢЫЗ-READ-ME.txt
